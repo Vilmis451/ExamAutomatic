@@ -79,6 +79,7 @@ public class Tests {
 
     @Test(priority = 3, groups = "deleteMovie")
     public void negativeDeleteTest() {
+        genreField = "co";
         Delete.deleteFiller(idField, nameField, genreField, actorField, directorField, durationField);
         Assert.assertNotEquals(Delete.deleteButton(), false);
     }
