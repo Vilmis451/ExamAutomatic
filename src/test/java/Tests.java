@@ -66,6 +66,7 @@ public class Tests {
 
     @Test(priority = 0, groups = "createMovie")
     public void negativeTest() {
+        genreField = "co";
         Create.createFiller(nameField, genreField, actorField, directorField, durationField);
         Assert.assertNotEquals(Create.createButton(), false);
     }
@@ -90,6 +91,7 @@ public class Tests {
 
     @Test(priority = 4, groups = "editMovie")
     public void negativeEditTest() {
+        genreField = "co";
         Edit.editFiller(idField, nameField, genreField, actorField, directorField, durationField);
         Assert.assertNotEquals(Edit.editButton(), false);
     }
