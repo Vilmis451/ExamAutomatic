@@ -21,11 +21,11 @@ public class Delete {
 
     public static void deleteSetup() {
 
-        // sync webdrivers with selenium code
+        //Sync webdrivers with selenium code
         System.setProperty("webdriver.chrome.driver", "src/webdriver/chromedriver97.exe");
-        //susikuriame narsykels objekta pagal atitinkamai atsisiustus driverius
+        //Creating browser object with accordingly downloaded drivers
         browser = new ChromeDriver();
-        // browser url
+        //Browser url
         browser.get(browserGet);
     }
 
@@ -37,26 +37,26 @@ public class Delete {
         WebElement nameField = browser.findElement(By.xpath(deleteXpatchName));
         //Sends desired text
         nameField.sendKeys(name);
-        //Patch to filler
+        //Path to filler
         WebElement genderField = browser.findElement(By.xpath(deleteXpatchGenre));
         //Sends desired text
         genderField.sendKeys(genre);
-        //Patch to filler
+        //Path to filler
         WebElement actorsField = browser.findElement(By.xpath(deleteXpatchActors));
         //Sends desired text
         actorsField.sendKeys(actor);
-        //Patch to filler
+        //Path to filler
         WebElement directorField = browser.findElement(By.xpath(deleteXpatchDirector));
         //Sends desired text
         directorField.sendKeys(director);
-        //Patch to filler
+        //Path to filler
         WebElement durationField = browser.findElement(By.xpath(deleteXpatchDuration));
         //Sends desired text
         durationField.sendKeys(Integer.toString(duration));
     }
 
     public static boolean deleteButton() {
-        //Patch to button "Trinti"
+        //Path to button "Trinti"
         WebElement button = browser.findElement(By.xpath(deleteXpatchButton));
         //Clicks on it with javaScript
         JavascriptExecutor executor = (JavascriptExecutor) browser;
